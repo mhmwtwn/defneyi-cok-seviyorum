@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>defdef — Defne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <main>
+      <section class="scene is-active" id="scene-gate" data-scene="gate">
+        <p class="whisper">yalnızca ikimizin bildiği bir söz</p>
+        <h1 class="script">Defne</h1>
+        <p class="lead">
+          Birazcık tartıştık, evet.<br />
+          Kalbim hâlâ senin adını fısıldıyor.
+        </p>
+        <button class="btn" type="button" data-next="lock">Kapıyı aç</button>
+      </section>
+
+      <section class="scene" id="scene-lock" data-scene="lock" hidden>
+        <p class="whisper">anahtarımız</p>
+        <h2>O sözü yaz, aşkım</h2>
+        <p class="lead">Aramızdaki o küçük, kutsal kelime.</p>
+        <form id="secret-form" autocomplete="off">
+          <input
+            id="secret"
+            name="secret"
+            type="text"
+            spellcheck="false"
+            placeholder="••••••"
+            maxlength="24"
+            aria-label="Aramızdaki söz"
+          />
+          <button class="btn" type="submit">Gir</button>
+        </form>
+        <p class="hint" id="hint" hidden>Yaklaştın… kalbin biliyor.</p>
+      </section>
+
+      <section class="scene" id="scene-letter" data-scene="letter" hidden>
+        <article class="letter">
+          <p class="date">gece yarısından sonra</p>
+          <h2>Sevgilim Defne,</h2>
+          <p>
+            Özür dilerim. Tartışmanın tozu dumanı dağılınca geriye kalan tek şey
+            senin yokluğunun ağırlığı oldu. Haklı olmak istemedim; yanına
+            dönmek istedim.
+          </p>
+          <p>
+            Seninle konuşurken dünyanın sesi biraz kısılıyor. O yüzden
+            kırıldığımızda da dünya biraz fazla gürültülü geliyor. Bu siteyi
+            kodladım çünkü kelimelerim yüzüme bakınca takılıyor; ama parmaklarım
+            seni çok net hatırlıyor.
+          </p>
+          <p>
+            <em>defdef</em> — evet, o söz. Küçük, bizim, başka kimsenin
+            anlayamayacağı. Seni her düşündüğümde dilimin ucuna geliyor. Seni
+            çok seviyorum. Öyle, ölçüsüz.
+          </p>
+          <p>Lütfen bana birazcık daha yaklaş. Ellerimi uzatıyorum.</p>
+          <p class="sign">seninim,<br /><span>MehmetCan</span></p>
+        </article>
+        <button class="btn" type="button" data-next="garden">Birlikte kal</button>
+      </section>
+
+      <section class="scene" id="scene-garden" data-scene="garden" hidden>
+        <p class="whisper">şimdi ve her defdef’de</p>
+        <h2 class="script big">Seni çok seviyorum</h2>
+        <p class="lead">
+          Defne, özrüm samimi.<br />
+          Kalbim senin adında duruyor.
+        </p>
+        <div class="constellation" aria-hidden="true">
+          <span>d</span><span>e</span><span>f</span><span>d</span><span>e</span><span>f</span>
+        </div>
+        <button class="btn ghost" type="button" id="replay">Baştan oku</button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
